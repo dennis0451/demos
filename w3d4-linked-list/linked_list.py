@@ -1,3 +1,4 @@
+
 # A simple example of a singly-linked list. Is not a totally OOP approach
 # as list traversal and manipulation is handled with global variables and functions
 # as opposed to a LinkedList class.
@@ -59,3 +60,25 @@ def print_list(head):
     pointer = pointer.next_node
 
 print_list(node_a)
+
+
+# DO THIS FIRST
+# Exercise: Remove *last node* from list.
+# 1. Iterate thru list until pointer is pointing to the *second-to-last* node in the list
+# 2. For the *second-to-last* node, set it's `next_node` property to None (so it doesn't point to anything).
+# 3. Voila! Your second-to-last node is now the last node in the list. Test by printing out all the values in the list
+# to confirm.
+
+# Exercise: Remove *any desired node* from the list (except the head of the list; that is a special case)
+# NOTE: This is a more complex task. I *highly* recommend drawing/using visual aids.
+# You need *two* pointers, leading_pointer and trailing_pointer
+# If leading_pointer is set to the *third* node in the list, *trailing_pointer* is set to the *second*.
+# I recommend implementing this and testing with print statements before moving forward.
+#
+# 1. Iterate thru array until the leading_pointer is set to the node you want to remove, 
+# and trailing_pointer is set to the node *before* the one you want to remove.
+# 2. For trailing_pointer, set it's next_node to leading_pointer.next_node 
+# For example if  our list is A B C D and we want to remove C, we do:
+# B --> D
+#   C
+# We are *cutting out* the undesired node C from the list, and *stitching the list back together so B points to D.
